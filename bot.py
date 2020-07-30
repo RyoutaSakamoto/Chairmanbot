@@ -82,7 +82,7 @@ class Activity(commands.Cog):
         else:
             return False
 
-    @commands.Cog.listener()
+    @client.Cog.listener()
     async def on_message(self, message):
         if message.author == self.bot.user:
             return
@@ -99,7 +99,7 @@ class Activity(commands.Cog):
         if await self.lvl_up(author_id):
             print(f"{message.author} has leveled up to level {self.users[author_id]['level']}")
 
-    @commands.command()
+    @client.command()
     async def level(self, ctx, member: discord.Member = None):
         '''Displays informations about user level'''
         member = ctx.author if not member else member
@@ -127,8 +127,8 @@ class AdministratorCommands(commands.Cog):
 
 
 
-    @commands.command()
-    @commands.has_permissions(ban_members=True)
+    @client.command()
+    @client.has_permissions(ban_members=True)
     async def softban(self, ctx, member : discord.Member, *, reason=None):
         if not member:
             return await ctx.send("You must specify a user")
@@ -140,26 +140,26 @@ class AdministratorCommands(commands.Cog):
         except discord.Forbidden:
             return await ctx.send("forbidden")
 
-    @commands.command()
-    @commands.has_permissions(manage_messages=True)
+    @client.command()
+    @client.has_permissions(manage_messages=True)
     async def clear(self, ctx, amount : int): #(ctx, amount : int):
         await ctx.channel.purge(limit=amount)
 
-    @commands.command()
-    @commands.has_permissions(kick_members=True)
+    @client.command()
+    @client.has_permissions(kick_members=True)
     async def kick(self, ctx, member : discord.Member, *, reason=None):
         await member.kick(reason=reason)
         await ctx.send(f'kicked{member.mention}')
 
 
-    @commands.command()
-    @commands.has_permissions(ban_members=True)
+    @client.command()
+    @client.has_permissions(ban_members=True)
     async def ban(self, ctx, member : discord.Member, *, reason=None):
         await member.ban(reason=reason)
         await ctx.send(f'Forbidden {member.mention}')
 
-    @commands.command()
-    @commands.has_permissions(ban_members=True)
+    @client.command()
+    @client.has_permissions(ban_members=True)
     async def unban(self, ctx, *, member):
         banned_users = await ctx.guild.bans()
         member_name, member_discriminator = member.split('#')
@@ -173,8 +173,8 @@ class AdministratorCommands(commands.Cog):
                 return
 
 
-    @commands.command()
-    @commands.has_permissions(ban_members=True)
+    @client.command()
+    @client.has_permissions(ban_members=True)
     async def mute(self, ctx, member:discord.Member):
         guild = ctx.guild
 
@@ -193,8 +193,8 @@ class AdministratorCommands(commands.Cog):
                 await member.add_roles(newRole)
                 await ctx.send("{}  User {} Was muted" .format(member.mention,ctx.author.mention))
 
-    @commands.command()
-    @commands.has_permissions(ban_members=True)
+    @client.command()
+    @client.has_permissions(ban_members=True)
     async def unmute(self, ctx, member:discord.Member):
         guild = ctx.guild
 
@@ -211,7 +211,7 @@ class Help(commands.Cog):
     def __init__(self,bot):
         self.bot = bot
 
-    @commands.command()
+    @client.command()
     async def help(self,ctx):
         embed = discord.Embed(title="Discord Bot", description="Commands", color=0xeee657)
         embed.add_field(name="ping" , value="checks connection to server", )
@@ -235,16 +235,13 @@ class Help(commands.Cog):
 
         await ctx.send(embed=embed)
 
-def setup(bot):
-    bot.add_cog(Help(bot))
-
 class DiscordDisco(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
 
 
-    @commands.command(pass_contect=True)
+    @client.command(pass_contect=True)
     async def join(self, ctx):
         global voice
         channel = ctx.message.author.voice.channel
@@ -256,7 +253,7 @@ class DiscordDisco(commands.Cog):
             voice = await channel.connect()
         await ctx.channel.send(f'Joined {channel}')
 
-    @commands.command(pass_contect=True)
+    @client.command(pass_contect=True)
     async def leave(self, ctx):
         channel = ctx.message.author.voice.channel
         voice = get(self.bot.voice_clients, guild=ctx.guild)
@@ -266,7 +263,7 @@ class DiscordDisco(commands.Cog):
             await ctx.channel.send(f'Left {channel}')
 
 
-    @commands.command(aliases=['p', 'pla'])
+    @client.command(aliases=['p', 'pla'])
     async def play(self, ctx, url: str):
 
         def check_queue():
@@ -356,7 +353,7 @@ class DiscordDisco(commands.Cog):
         await ctx.channel.send(f'Playing: {name[0]}')
         print('playing\n')
 
-    @commands.command(aliases=['pa', 'pau'])
+    @client.command(aliases=['pa', 'pau'])
     async def pause(self, ctx):
 
         voice = get(self.bot.voice_clients, guild=ctx.guild)
@@ -369,7 +366,7 @@ class DiscordDisco(commands.Cog):
             print('Music not playing - failed pause')
             await ctx.channel.send('Music not playing - failed pause')
 
-    @commands.command(aliases=['r', 'res'])
+    @client.command(aliases=['r', 'res'])
     async def resume(self, ctx):
 
         voice = get(self.bot.voice_clients, guild=ctx.guild)
@@ -382,7 +379,7 @@ class DiscordDisco(commands.Cog):
             print('Music is not paused')
             await ctx.channel.send('Music is not paused')
 
-    @commands.command(aliases=['s', 'ski'])
+    @client.command(aliases=['s', 'ski'])
     async def skip(self, ctx):
 
         voice = get(self.bot.voice_clients, guild=ctx.guild)
@@ -397,7 +394,7 @@ class DiscordDisco(commands.Cog):
             print('Music not playing - failed skipped')
             await ctx.channel.send('Music not playing - failed skipped')
 
-    @commands.command(aliases=['q', 'que'])
+    @client.command(aliases=['q', 'que'])
     async def queue(self, ctx, url: str):
         queues = {}
         Queue_infile = os.path.isdir('./Queue')
@@ -445,7 +442,7 @@ class RNGCog(commands.Cog, name='Rng'):
 
 
 
-    @commands.command(name='randnum', aliases=['randnumber'])
+    @client.command(name='randnum', aliases=['randnumber'])
     async def random_num(self, ctx, min: int = 0, max: int = 10):
         """Chooses a random number within a given range.
         Defaults to 0 to 10"""
@@ -453,7 +450,7 @@ class RNGCog(commands.Cog, name='Rng'):
             max, min = min, max
         await ctx.send(random.randint(min, max))
 
-    @commands.command(name='roll')
+    @client.command(name='roll')
     async def roll_die(self, ctx, num_rolls: Optional[int] = 1, faces: Optional[int] = 6, sorted: bool = False):
         """Roll a die with Y faces X times.
         Defaults to 1 roll of a 6-side die
@@ -484,7 +481,7 @@ class RNGCog(commands.Cog, name='Rng'):
             await ctx.send('Due to discord\'s message character limit, I cannot finish this request.\n'
                            'Please try again with smaller numbers')
 
-    @commands.command(name='choice')
+    @client.command(name='choice')
     async def random_choice(self, ctx, *choices: commands.clean_content):
         """Chooses a random element from a list.
         Separate each element by " " or spaces"""
@@ -506,7 +503,7 @@ class Slots(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command()
+    @client.command()
     async def slots(self, ctx):
         """!slots - Play fruit emojis slot machine."""
         icon_url = 'https://i.imgur.com/8oGuoyq.png'
@@ -546,7 +543,7 @@ def setup(bot):
 start_time = datetime.datetime.now()
 
 class Time(commands.Cog):
-	@commands.command()
+	@client.command()
 	async def time(self, ctx):
 		current_time = datetime.datetime.now().strftime('%H:%M:%S')
 		embed = discord.Embed(color=0xB2272D)
