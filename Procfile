@@ -1,1 +1,1 @@
-worker: python Chairmanbot.py
+worker: python bot.py
