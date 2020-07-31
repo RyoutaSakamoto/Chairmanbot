@@ -21,12 +21,6 @@ async def on_ready():
     await client.change_presence(activity=discord.Game(name="Barry"))
     print('Logged in as:\n{0.user.name}\n{0.user.id}'.format(client))
 
-@client.command(pass_context=True)
-async def rules(ctx):
-    emoji = get(ctx.message.server.emojis, name="moregems")
-    embed = Embed(title=f"Server Rules! {emoji}", color=0x24045b, description=f"Here is the emoji again! {emoji}")
-    await client.say(embed=embed)
-	
 @client.command()
 async def roast(ctx, member):
     responses = open('./roast.txt').read().splitlines()
