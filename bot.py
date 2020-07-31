@@ -21,7 +21,7 @@ client.remove_command('help')
 
 @client.command()
 async def roast(ctx, member):
-    responses = open('roast.txt').read().splitlines()
+    responses = open('./roast.txt'). read ().splitlines()
     random.seed(a=None)
     response = random.choice(responses)
     await ctx.send(f"{response} {member}")
