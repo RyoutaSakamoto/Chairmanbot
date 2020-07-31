@@ -24,6 +24,51 @@ async def on_ready():
 @client.command()
 async def malert(ctx):
     await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/738658744656724018/image0-5.jpg")
+
+@client.command()
+async def erura(ctx):
+    await ctx.send("https://cdn.discordapp.com/attachments/643826426415546387/738673749678882896/artej_equipmentRank.png")
+
+@client.command()
+async def grebel(ctx):
+    await ctx.send("https://cdn.discordapp.com/attachments/729672427507941447/729672676947525733/Basic_Guide.png")
+
+@client.command()
+async def gchaotic(ctx):
+    await ctx.send("https://cdn.discordapp.com/attachments/729672427507941447/729672697868582932/02._BASIC_GUIDE_-_CHAOTIC_GAUNTLET.png")
+
+@client.command()
+async def gmaverick(ctx):
+    await ctx.send("https://cdn.discordapp.com/attachments/729672427507941447/729672725660172298/03._BASIC_GUIDE_-_MAVERICK_GAUNTLET.png")
+
+@client.command()
+async def gchampion(ctx):
+    await ctx.send("https://cdn.discordapp.com/attachments/729672427507941447/729672798813028392/04._BASIC_GUIDE_-_CHAMPION_GAUNTLET-1.png")
+
+@client.command()
+async def gholy(ctx):
+    await ctx.send("https://cdn.discordapp.com/attachments/729672427507941447/729672819608256522/05._BASIC_GUIDE_-_HOLY_GAUNTLET.png")
+
+@client.command()
+async def glogician(ctx):
+    await ctx.send("https://cdn.discordapp.com/attachments/729672427507941447/729672852718223411/06._BASIC_GUIDE_-_LOGICIAN_GAUNTLET-1.png")
+
+@client.command()
+async def gmaniacal(ctx):
+    await ctx.send("https://cdn.discordapp.com/attachments/729672427507941447/729672886062678076/07._BASIC_GUIDE_-_MANIACAL_GAUNTLET.png")
+
+@client.command()
+async def gvaliant(ctx):
+    await ctx.send("https://cdn.discordapp.com/attachments/729672427507941447/729672908967772200/08._BASIC_GUIDE_-_VALIANT_GAUNTLET.png")
+
+@client.command()
+async def gdark(ctx):
+    await ctx.send("https://cdn.discordapp.com/attachments/729672427507941447/729672939901026434/09._BASIC_GUIDE_-_DARK_GAUNTLET.png")
+
+@client.command()
+async def glawful(ctx):
+    await ctx.send("https://cdn.discordapp.com/attachments/729672427507941447/729672992636010496/10._BASIC_GUIDE_-_LAWFUL_GAUNTLET.png")
+
 	
 @client.command()
 async def roast(ctx, member):
@@ -136,34 +181,70 @@ async def unban(ctx, *, member):
             return
 
 @client.command()
+async def hadmin(ctx):
+    embed = discord.Embed(title="Discord Bot", description="Commands", color=0xeee657)
+    embed.add_field(name="say")
+    embed.add_field(name="clear")
+    embed.add_field(name="kick")
+    embed.add_field(name="ban")
+    embed.add_field(name="unban")
+    embed.add_field(name="mute")
+    embed.add_field(name="unmute")
+    await ctx.send(embed=embed)
+
+@client.command()
+async def hfun(ctx):
+    embed = discord.Embed(title="Discord Bot", description="Commands", color=0xeee657)
+    embed.add_field(name="8ball")
+    embed.add_field(name="choice")
+    embed.add_field(name="roll")
+    embed.add_field(name="randnum")
+    embed.add_field(name="slots")
+    await ctx.send(embed=embed)
+
+@client.command()
+async def hguides(ctx):
+    embed = discord.Embed(title="Discord Bot", description="Commands", color=0xeee657)
+    embed.add_field(name="malert")
+    embed.add_field(name="erura")
+    embed.add_field(name="grebel")
+    embed.add_field(name="gchaotic")
+    embed.add_field(name="gmaverick")
+    embed.add_field(name="gholy")
+    embed.add_field(name="glawful")
+    embed.add_field(name="glogician")
+    embed.add_field(name="gdark")
+    embed.add_field(name="gchampion")
+    embed.add_field(name="gvaliant")
+    embed.add_field(name="gmaniacal")
+    await ctx.send(embed=embed)
+	
+@client.command()
+async def hother(ctx):
+    embed = discord.Embed(title="Discord Bot", description="Commands", color=0xeee657)
+    embed.add_field(name="user")
+    embed.add_field(name="calculate")
+    embed.add_field(name="subtract")
+    embed.add_field(name="multiply")
+    embed.add_field(name="division")
+    await ctx.send(embed=embed)
+
+@client.command()
+async def hutility(ctx):
+    embed = discord.Embed(title="Discord Bot", description="Commands", color=0xeee657)
+    embed.add_field(name="time")
+    embed.add_field(name="ping")
+    embed.add_field(name="uptime")
+    await ctx.send(embed=embed)
+
+@client.command()
 async def help(ctx):
     embed = discord.Embed(title="Discord Bot", description="Commands", color=0xeee657)
-    embed.add_field(name="ping", value="checks connection to server", )
-    embed.add_field(name="8ball", value="ask a question", )
-    embed.add_field(name="choice", value="choose between text", )
-    embed.add_field(name="roll", value="dices", )
-    embed.add_field(name="randnum", value="between 1 & 10 default", )
-    embed.add_field(name="say", value="bot will say it for you", )
-    embed.add_field(name="user", value="contains profile information", )
-    embed.add_field(name="calculate", value="+", )
-    embed.add_field(name="subtract", value="-", )
-    embed.add_field(name="multiply", value="*", )
-    embed.add_field(name="division", value="/", )
-    embed.add_field(name="level", value="tells you level", )
-    embed.add_field(name="clear", value="clears chat msg", )
-    embed.add_field(name="kick", value="kicks member", )
-    embed.add_field(name="ban", value="bans member", )
-    embed.add_field(name="unban", value="unbans member", )
-    embed.add_field(name="mute", value="mutes member", )
-    embed.add_field(name="unmute", value="unmutes member", )
-    embed.add_field(name="join", value="bot joins to voice", )
-    embed.add_field(name="leave", value="bot leaves voice", )
-    embed.add_field(name="play", value="plays a song", )
-    embed.add_field(name="pause", value="pauses song", )
-    embed.add_field(name="resume", value="resume song", )
-    embed.add_field(name="skip", value="skips song", )
-    embed.add_field(name="queue", value="queues a song", )
-
+    embed.add_field(name="hutility")
+    embed.add_field(name="hother")
+    embed.add_field(name="hguides")
+    embed.add_field(name="hfun")
+    embed.add_field(name="hadmin")
     await ctx.send(embed=embed)
 
 @client.command(name='8ball',
@@ -209,11 +290,6 @@ async def division(ctx, a:int, b:int):
     else:
         ans=a/b
     await ctx.send(ans)
-
-@client.command()
-async def remind(ctx):
-    await ctx.send(mm)
-
 
 @client.command()
 async def slots(ctx):
