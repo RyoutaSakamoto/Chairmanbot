@@ -19,8 +19,8 @@ client.remove_command('help')
 
 @client.event
 async def on_ready():
-	await client.change_presence(status=discord.Status.iddle, activity=discord.Streaming('Barry'))
-
+    await client.change_presence(activity=discord.Streaming(name="Barry"))
+    print("Bot is ready!")
 
 @client.command()
 async def roast(ctx, member):
@@ -458,5 +458,4 @@ async def queue(self, ctx, url: str):
     await ctx.channel.send('Adding song ' + str(q_num) + ' to the queue')
     print('Song Added')
 	
-print("Bot is ready!")
 client.run("NzM3NjU0NjI3OTM1NDUzMTk2.XyAgaA.7RngJ0zuZhnwuAwjmZJNLWQ_yXQ")
