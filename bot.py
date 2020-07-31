@@ -259,23 +259,5 @@ async def uptime(ctx):
 	difference = current_time - start_time
 	text = difference.total_seconds() / 3600
 	await ctx.send('Current uptime: {:.2f} hours'.format(text))
-	
-@client.command()
-async def level(ctx, member: discord.Member = None):
-    '''Displays informations about user level'''
-    member = ctx.author if not member else member
-    member_id = str(member.id)
 
-    if not member_id in self.users:
-        await ctx.send("There isn't any user")
-    else:
-        embed = discord.Embed(color=discord.Color.green(), timestamp=ctx.message.created_at)
-
-        embed.set_author(name=f"Level - {member.name}", icon_url=self.bot.user.avatar_url)
-        embed.set_thumbnail(url=member.avatar_url)
-        embed.add_field(name="Level", value=self.users[member_id]['level'])
-        embed.add_field(name="XP", value=f"{self.users[member_id]['exp']}/{round((4*(self.users[member_id]['level'] ** 3)) / 5)}")
-
-        await ctx.send(embed=embed)
-	
 client.run("NzM3NjU0NjI3OTM1NDUzMTk2.XyAgaA.7RngJ0zuZhnwuAwjmZJNLWQ_yXQ")
