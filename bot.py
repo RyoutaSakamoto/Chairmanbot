@@ -30,6 +30,10 @@ async def erura(ctx):
     await ctx.send("https://cdn.discordapp.com/attachments/643826426415546387/738673749678882896/artej_equipmentRank.png")
 
 @client.command()
+async def mchart(ctx):
+    await ctx.send("https://cdn.discordapp.com/attachments/737654987936497708/738854250712662066/image0.jpg")
+
+@client.command()
 async def grebel(ctx):
     await ctx.send("https://cdn.discordapp.com/attachments/729672427507941447/729672676947525733/Basic_Guide.png")
 
@@ -184,7 +188,7 @@ async def unban(ctx, *, member):
 async def help(ctx):
     embed = discord.Embed(title="Chairman´s Bot command List", color=0x000000)
     embed.add_field(name="other", value="user, division, multiply, subtract, calculate",)
-    embed.add_field(name="guides", value="malert, erura, grebel, gchaotic, gmaverick, gholy, glawful, glogician, gdark, gchampion, gvaliant, gmaniacal",)
+    embed.add_field(name="guides", value="malert, erura, mchart, grebel, gchaotic, gmaverick, gholy, glawful, glogician, gdark, gchampion, gvaliant, gmaniacal",)
     embed.add_field(name="fun", value="8ball, choice, roll, randnum, slots, roast",)
     embed.add_field(name="admin", value="say, clear, kick, ban, unban, mute, unmute",)
     embed.add_field(name="utility", value="time, ping, uptime",)
