@@ -28,13 +28,13 @@ async def on_ready():
     print(client.user.id)
     print('-----')
 
-newUserDMMessage = "WELCOME!"
+Message = "WELCOME!"
 
 #Public Welcome
 @client.event
 async def on_member_join(member):
     print("Recognized that " + member.name + " joined")
-    await client.send_message(member, newUserDMMessage)
+    await client.send_message(member, Message)
     await client.send_message(discord.Object(id='726530916746395660'), 'Welcome!')
     print("Sent message to " + member.name)
     print("Sent message about " + member.name + " to #📡welcome")
