@@ -17,13 +17,10 @@ global mm
 client = commands.Bot(command_prefix = ".")
 client.remove_command('help')
 
+@client.event
+async def on_ready():
+	await client.change_presence(status=discord.Status.iddle, activity=discord.Streaming('Barry'))
 
-class ActivityType(IntEnum): 
-     unknown = -1 
-     playing = 0 
-     streaming = 1 
-     listening = 2 
-     watching = 3 
 
 @client.command()
 async def roast(ctx, member):
