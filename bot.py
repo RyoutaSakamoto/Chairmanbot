@@ -18,27 +18,9 @@ client.remove_command('help')
 
 @client.event
 async def on_ready():
-    await client.change_presence(activity=discord.Game(name="Barry"))
+    await client.change_presence(activity=discord.Game(name="Chairman´s Club"))
     print('Logged in as:\n{0.user.name}\n{0.user.id}'.format(client))
 
-@client.event
-async def on_ready():
-    print('logged in as')
-    print(client.user.name)
-    print(client.user.id)
-    print('-----')
-
-Message = "WELCOME!"
-
-#Public Welcome
-@client.event
-async def on_member_join(member):
-    print("Recognized that " + member.name + " joined")
-    await client.send_message(member, Message)
-    await client.send_message(discord.Object(id='726530916746395660'), 'Welcome!')
-    print("Sent message to " + member.name)
-    print("Sent message about " + member.name + " to #📡welcome")
-	
 @client.command()
 async def roast(ctx, member):
     responses = open('./roast.txt').read().splitlines()
