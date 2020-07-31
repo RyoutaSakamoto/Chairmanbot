@@ -118,7 +118,7 @@ async def unmute(ctx, member:discord.Member):
 
 @client.command()
 @commands.has_permissions(ban_members=True)
-async def unban(self, ctx, *, member):
+async def unban(ctx, *, member):
     banned_users = await ctx.guild.bans()
     member_name, member_discriminator = member.split('#')
 
