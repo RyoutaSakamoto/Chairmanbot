@@ -2,7 +2,6 @@ import asyncio
 import random
 from asyncio import queues
 import discord
-import youtube_dl
 import json
 import shutil
 import os
@@ -19,6 +18,13 @@ global mm
 client = commands.Bot(command_prefix = ".")
 client.remove_command('help')
 
+
+class ActivityType(IntEnum): 
+     unknown = -1 
+     playing = 0 
+     streaming = 1 
+     listening = 2 
+     watching = 3 
 
 @client.command()
 async def roast(ctx, member):
