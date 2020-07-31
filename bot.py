@@ -18,7 +18,7 @@ client.remove_command('help')
 
 @client.event
 async def on_ready():
-    await client.change_presence(activity=discord.Streaming(name="Barry"))
+    await bot.change_presence(activity=discord.Game(name="Barry"))
     print("Bot is ready!")
 
 @client.command()
