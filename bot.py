@@ -19,7 +19,7 @@ client.remove_command('help')
 @client.event
 async def on_ready():
     await client.change_presence(activity=discord.Game(name="Barry"))
-    print('Logged in as:\n{0.user.name}\n{0.user.id}'.format(bot))
+    print('Logged in as:\n{0.user.name}\n{0.user.id}'.format(client))
 
 @client.command()
 async def roast(ctx, member):
