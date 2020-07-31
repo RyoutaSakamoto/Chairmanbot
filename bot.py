@@ -181,70 +181,13 @@ async def unban(ctx, *, member):
             return
 
 @client.command()
-async def hadmin(ctx):
-    embed = discord.Embed(title="Discord Bot", description="Commands", color=0xeee657)
-    embed.add_field(name="say")
-    embed.add_field(name="clear")
-    embed.add_field(name="kick")
-    embed.add_field(name="ban")
-    embed.add_field(name="unban")
-    embed.add_field(name="mute")
-    embed.add_field(name="unmute")
-    await ctx.send(embed=embed)
-
-@client.command()
-async def hfun(ctx):
-    embed = discord.Embed(title="Discord Bot", description="Commands", color=0xeee657)
-    embed.add_field(name="8ball")
-    embed.add_field(name="choice")
-    embed.add_field(name="roll")
-    embed.add_field(name="randnum")
-    embed.add_field(name="slots")
-    await ctx.send(embed=embed)
-
-@client.command()
-async def hguides(ctx):
-    embed = discord.Embed(title="Discord Bot", description="Commands", color=0xeee657)
-    embed.add_field(name="malert")
-    embed.add_field(name="erura")
-    embed.add_field(name="grebel")
-    embed.add_field(name="gchaotic")
-    embed.add_field(name="gmaverick")
-    embed.add_field(name="gholy")
-    embed.add_field(name="glawful")
-    embed.add_field(name="glogician")
-    embed.add_field(name="gdark")
-    embed.add_field(name="gchampion")
-    embed.add_field(name="gvaliant")
-    embed.add_field(name="gmaniacal")
-    await ctx.send(embed=embed)
-	
-@client.command()
-async def hother(ctx):
-    embed = discord.Embed(title="Discord Bot", description="Commands", color=0xeee657)
-    embed.add_field(name="user")
-    embed.add_field(name="calculate")
-    embed.add_field(name="subtract")
-    embed.add_field(name="multiply")
-    embed.add_field(name="division")
-    await ctx.send(embed=embed)
-
-@client.command()
-async def hutility(ctx):
-    embed = discord.Embed(title="Discord Bot", description="Commands", color=0xeee657)
-    embed.add_field(name="time")
-    embed.add_field(name="ping")
-    embed.add_field(name="uptime")
-    await ctx.send(embed=embed)
-
-@client.command()
 async def help(ctx):
     embed = discord.Embed(title="Discord Bot", description="Commands", color=0xeee657)
-    embed.add_field(name="hutility")
-    embed.add_field(name="hother")
-    embed.add_field(name="hguides")
-    embed.add_field(name="hfun")
-    embed.add_field(name="hadmin")
+    embed.add_field(name="other", value="user, division, multiply, subtract, calculate",)
+    embed.add_field(name="guides", value="malert, erura, grebel, gchaotic, gmaverick, gholy, glawful, glogician, gdark, gchampion, gvaliant, gmaniacal",)
+    embed.add_field(name="hfun", value="8ball, choice, roll, randnum, slots",)
+    embed.add_field(name="hadmin", value="say, clear, kick, ban, unban, mute, unmute",)
+    embed.add_field(name="utility", value="time, ping, uptime",)
     await ctx.send(embed=embed)
 
 @client.command(name='8ball',
