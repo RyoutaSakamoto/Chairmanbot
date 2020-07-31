@@ -162,31 +162,25 @@ async def help(ctx):
 
     await ctx.send(embed=embed)
 
-@client.command()
-async def _8ball(ctx, *, question):
-    responses = [
-            "It is certain.",
-            "It is decidedly so.",
-            "Without a doubt.",
-            "Yes - definitely.",
-            " You may rely on it.",
-            " As I see it, yes.",
-            "Most likely.",
-            " Outlook good.",
-            "Yes.",
-            "Signs point to yes.",
-            "Reply hazy, try again.",
-            "Ask again later.",
-            "Better not tell you now.",
-            "Cannot predict now.",
-            "Concentrate and ask again.",
-            "Don't count on it.",
-            " My reply is no.",
-            "My sources say no.",
-            "Outlook not so good.",
-            "Very doubtful."]
-    await ctx.send(f'Question: {question}\nAnswer: {random.choice(responses)}')
+@client.command(name='8ball',
+            description="Answers a yes/no question.",
+            brief="Answers from the beyond.",
+            aliases=['eight_ball', 'eightball', '8-ball'],
+            pass_context=True)
 
+async def eight_ball(context):
+    possible_responses = [
+
+        'That is a resounding no',
+        'It is not looking likely',
+        'Too hard to tell',
+        'It is quite possible',
+        'Definitely',
+        'Maybe so.'
+
+    ]
+    await context.channel.send(random.choice(possible_responses) + ", " + context.message.author.mention)
+	
 @client.command()
 async def say(ctx,*,msg):
     await ctx.message.delete()
