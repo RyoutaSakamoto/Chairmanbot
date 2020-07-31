@@ -2,6 +2,7 @@ import asyncio
 import random
 from asyncio import queues
 import discord
+import youtube_dl
 import json
 import shutil
 import os
