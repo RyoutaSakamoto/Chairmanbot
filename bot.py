@@ -188,10 +188,10 @@ async def unban(ctx, *, member):
 @client.command()
 async def help(ctx):
     embed = discord.Embed(title="Chairman´s Bot command List", color=0x000000)
-    embed.add_field(name="other", value="```user```, ```division`, ```multiply```, ```subtract```, ```calculate```")
+    embed.add_field(name="other", value="```user```, ```division```, ```multiply```, ```subtract```, ```calculate```")
     embed.add_field(name="guides", value="```hguides```")
     embed.add_field(name="fun", value="```8ball```, ```slots```, ```roast```")
-    embed.add_field(name="admin", value="```say```, ```clear`, `kick`, ```ban```, ```unban```, ```mute```, ```unmute```")
+    embed.add_field(name="admin", value="```say```, ```clear```, ```kick```, ```ban```, ```unban```, ```mute```, ```unmute```")
     embed.add_field(name="utility", value="```time```, ```ping```, ```uptime```")
     await ctx.send(embed=embed)
 
