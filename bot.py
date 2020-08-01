@@ -27,8 +27,24 @@ async def malert(ctx):
     await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/738658744656724018/image0-5.jpg")
 
 @client.command()
+async def hrura(ctx):
+    await ctx.send("https://cdn.discordapp.com/attachments/738064840240791712/739063744801406986/unknown.png")
+
+@client.command()
+async def gca(ctx):
+    await ctx.send("https://cdn.discordapp.com/attachments/738064840240791712/739063660114214912/unknown.png")
+
+@client.command()
+async def dweapon(ctx):
+    await ctx.send("https://cdn.discordapp.com/attachments/729673817382846545/729674572131074068/INFOGRAPHIC_-_CHARM_-_WEAPON.png")
+
+@client.command()
+async def darmor(ctx):
+    await ctx.send("https://cdn.discordapp.com/attachments/729673817382846545/729674660366647296/armordismantle.png")
+
+@client.command()
 async def erura(ctx):
-    await ctx.send("https://cdn.discordapp.com/attachments/643826426415546387/738673749678882896/artej_equipmentRank.png")
+    await ctx.send("https://cdn.discordapp.com/attachments/739045451772329984/739045481593962536/artej_equipmentRank2.png")
 
 @client.command()
 async def mchart(ctx):
@@ -210,7 +226,12 @@ async def hguides(ctx):
                                                      "\n```-For Champion Gauntlet \nType: .gchampion\n```"
                                                      "\n```-For Valiant Gauntlet \nType: .gvaliant\n```"
                                                      "\n```-For Maniacal Gauntlet \nType: .gmaniacal\n```")
-    embed.add_field(name="3. Equipment", value="\n```Info on Resource amount needed to level up \nType - .mchart\n```")
+    embed.add_field(name="3. Equipment", value="\n```Info on Resource amount needed to level up \nType - .mchart\n"```
+                                               "\n```Info on Dismantle Weapon \nType - .dweapon```"
+                                               "\n```Info on Dismantle Armor \nType - .darmor```"
+                                               "\n```Info on Gauntlet Core Amount \nType - .gca```"
+                                               "\n```Info on Equimpent Rank up Resource Amount \nType - .erura```"
+                                               "\n```Info on Hero Rank up Resource Amount \nType - .hrura```")
     await ctx.send(embed=embed)
 
 @client.command(name='8ball',
