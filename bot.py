@@ -188,12 +188,29 @@ async def unban(ctx, *, member):
 async def help(ctx):
     embed = discord.Embed(title="Chairman´s Bot command List", color=0x000000)
     embed.add_field(name="other", value="`user`, `division`, `multiply`, `subtract`, `calculate`",)
-    embed.add_field(name="guides", value="`malert`, `erura`, `mchart`, `grebel`, `gchaotic`, `gmaverick`, `gholy`, `glawful`, `glogician`, `gdark`, `gchampion`, `gvaliant`, `gmaniacal`",)
-    embed.add_field(name="fun", value="`8ball`, `choice`, `roll`, `randnum`, `slots`, `roast`",)
+    embed.add_field(name="guides", value="`hguides`",)
+    embed.add_field(name="fun", value="`8ball`, `slots`, `roast`",)
     embed.add_field(name="admin", value="`say`, `clear`, `kick`, `ban`, `unban`, `mute`, `unmute`",)
     embed.add_field(name="utility", value="`time`, `ping`, `uptime`",)
     await ctx.send(embed=embed)
 
+@client.command()
+async def hguides(ctx):
+    embed = discord.Embed(title="Chairman´s Bot Guide List", color=0x000000)
+    embed.add_field(name="1. Minions Guide", value="
+		    -Where to find minions and which gauntlet to use? Type .malert",)
+    embed.add_field(name="2. Gauntlets Guide", value="-For Rebel Gauntlet Type: .grebel
+                    -For Chaotic Gauntlet Type: .gchaotic
+                    -For Maverick Gauntlet Type: .gmaverick
+                    -For Holy Gauntlet Type: .gholy
+                    -For Lawful Gauntlet Type: .glawful
+                    -For Logician Gauntlet Type: .glogician
+                    -For Dark Gauntlet Type: .gdark
+                    -For Champion Gauntlet Type: .gchampion
+                    -For Valiant Gauntlet Type: .gvaliant
+                    -For Maniacal Gauntlet Type: .gmaniacal ")
+   embed.add_field(name="3. Equipment", value="Info on Resource amount needed to level up type - .mchart",)
+		    
 @client.command(name='8ball',
             description="Answers a yes/no question.",
             brief="Answers from the beyond.",
