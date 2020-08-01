@@ -208,6 +208,8 @@ async def hguides(ctx):
                                                      "-For Champion Gauntlet Type: .gchampion"
                                                      "-For Valiant Gauntlet Type: .gvaliant"
                                                      "-For Maniacal Gauntlet Type: .gmaniacal")
+    embed.add_field(name="3. Equipment", value="Info on Resource amount needed to level up type - .mchart")
+    await ctx.send(embed=embed)
 
 @client.command(name='8ball',
             description="Answers a yes/no question.",
