@@ -208,7 +208,11 @@ async def eight_ball(context):
         'Too hard to tell',
         'It is quite possible',
         'Definitely',
-        'Maybe so.'
+        'Maybe so',
+	'SERIOUSLY....you already know the answer from Google and you still ask me. Why not asking Google,'
+	'Nah, im just a machine. Pip...Pop...Pip...Pi...Di..Pop...',
+	'Wait...Lets me ask my friend Google real quick',
+	'Ah...These questions again...Why did you created me',   
 
     ]
     await context.channel.send(random.choice(possible_responses) + ", " + context.message.author.mention)
