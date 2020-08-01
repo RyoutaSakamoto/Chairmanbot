@@ -15,7 +15,7 @@ global mm
 
 client = commands.Bot(command_prefix = ".")
 client.remove_command('help')
-client.get_emoji("<:rebelgauntlet:696317949413294151>")
+client.get_emoji(<:rebelgauntlet:696317949413294151>)
 
 
 @client.event
