@@ -226,7 +226,7 @@ async def hguides(ctx):
                                                      "\n```-For Champion Gauntlet \nType: .gchampion\n```"
                                                      "\n```-For Valiant Gauntlet \nType: .gvaliant\n```"
                                                      "\n```-For Maniacal Gauntlet \nType: .gmaniacal\n```")
-    embed.add_field(name="3. Equipment", value="\n```Info on Resource amount needed to level up \nType - .mchart\n"```
+    embed.add_field(name="3. Equipment", value="\n```Info on Resource amount needed to level up \nType - .mchart\n```"
                                                "\n```Info on Dismantle Weapon \nType - .dweapon```"
                                                "\n```Info on Dismantle Armor \nType - .darmor```"
                                                "\n```Info on Gauntlet Core Amount \nType - .gca```"
