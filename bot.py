@@ -197,18 +197,18 @@ async def help(ctx):
 @client.command()
 async def hguides(ctx):
     embed = discord.Embed(title="Chairman´s Bot Guide List", color=0x000000)
-    embed.add_field(name="1. Minions Guide", value="-Where to find minions and which gauntlet to use? Type .malert",)
-    embed.add_field(name="2. Gauntlets Guide", value="-For Rebel Gauntlet Type: .grebel"
-                                                     "-For Chaotic Gauntlet Type: .gchaotic"
-                                                     "-For Maverick Gauntlet Type: .gmaverick"
-                                                     "-For Holy Gauntlet Type: .gholy"
-                                                     "-For Lawful Gauntlet Type: .glawful"
-                                                     "-For Logician Gauntlet Type: .glogician"
-                                                     "-For Dark Gauntlet Type: .gdark"
-                                                     "-For Champion Gauntlet Type: .gchampion"
-                                                     "-For Valiant Gauntlet Type: .gvaliant"
-                                                     "-For Maniacal Gauntlet Type: .gmaniacal")
-    embed.add_field(name="3. Equipment", value="Info on Resource amount needed to level up type - .mchart")
+    embed.add_field(name="1. Minions Guide", value="-Where to find minions and which gauntlet to use? Type .malert\n",)
+    embed.add_field(name="2. Gauntlets Guide", value="-For Rebel Gauntlet Type: .grebel\n"
+                                                     "-For Chaotic Gauntlet Type: .gchaotic\n"
+                                                     "-For Maverick Gauntlet Type: .gmaverick\n"
+                                                     "-For Holy Gauntlet Type: .gholy\n"
+                                                     "-For Lawful Gauntlet Type: .glawful\n"
+                                                     "-For Logician Gauntlet Type: .glogician\n"
+                                                     "-For Dark Gauntlet Type: .gdark\n"
+                                                     "-For Champion Gauntlet Type: .gchampion\n"
+                                                     "-For Valiant Gauntlet Type: .gvaliant\n"
+                                                     "-For Maniacal Gauntlet Type: .gmaniacal\n")
+    embed.add_field(name="3. Equipment", value="Info on Resource amount needed to level up type - .mchart\n")
     await ctx.send(embed=embed)
 
 @client.command(name='8ball',
