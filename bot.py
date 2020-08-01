@@ -198,7 +198,7 @@ async def help(ctx):
 async def hguides(ctx):
     embed = discord.Embed(title="Chairman´s Bot Guide List", color=0x000000)
     embed.add_field(name="1. Minions Guide", value="\n`-Where to find minions and which gauntlet to use? \nType .malert\n`",)
-    embed.add_field(name="2. Gauntlets Guide", value="\n`-For Rebel Gauntlet \nType: .grebel <:rebelgauntlet:739171836226437160>\n`"
+    embed.add_field(name="2. Gauntlets Guide", value="\n`-For Rebel Gauntlet \nType: .grebel <:rebelgauntlet:696317949413294151>\n`"
                                                      "\n`-For Chaotic Gauntlet \nType: .gchaotic\n`"
                                                      "\n`-For Maverick Gauntlet \nType: .gmaverick\n`"
                                                      "\n`-For Holy Gauntlet \nType: .gholy\n`"
