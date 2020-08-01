@@ -15,7 +15,6 @@ global mm
 
 client = commands.Bot(command_prefix = ".")
 client.remove_command('help')
-client.get_emoji(<:rebelgauntlet:696317949413294151>)
 
 
 @client.event
@@ -198,6 +197,7 @@ async def help(ctx):
 
 @client.command()
 async def hguides(ctx):
+    client.get_emoji("<:rebelgauntlet:696317949413294151>")
     embed = discord.Embed(title="Chairman´s Bot Guide List", color=0x000000)
     embed.add_field(name="1. Minions Guide", value="\n`-Where to find minions and which gauntlet to use? \nType .malert\n`",)
     embed.add_field(name="2. Gauntlets Guide", value="\n`-For Rebel Gauntlet \nType: .grebel<:rebelgauntlet:696317949413294151>\n`"
