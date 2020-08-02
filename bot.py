@@ -224,25 +224,10 @@ async def help(ctx):
 
 @client.command()
 async def hguides(ctx):
-    client.get_emoji("<:rebelgauntlet:696317949413294151>")
-    embed = discord.Embed(title="Chairman´s Bot Guide List", color=0x000000)
-    embed.add_field(name="1. Minions Guide", value="\n```-Where to find minions and which gauntlet to use? \nType: .malert\n```",)
-    embed.add_field(name="2. Gauntlets Guide", value="\n```-For Rebel Gauntlet \nType: .grebel\n```"
-                                                     "\n```-For Chaotic Gauntlet \nType: .gchaotic\n```"
-                                                     "\n```-For Maverick Gauntlet \nType: .gmaverick\n```"
-                                                     "\n```-For Holy Gauntlet \nType: .gholy\n```"
-                                                     "\n```-For Lawful Gauntlet \nType: .glawful\n```"
-                                                     "\n```-For Logician Gauntlet \nType: .glogician\n```"
-                                                     "\n```-For Dark Gauntlet \nType: .gdark\n```"
-                                                     "\n```-For Champion Gauntlet \nType: .gchampion\n```"
-                                                     "\n```-For Valiant Gauntlet \nType: .gvaliant\n```"
-                                                     "\n```-For Maniacal Gauntlet \nType: .gmaniacal\n```")
-    embed.add_field(name="3. Equipment", value="\n```Info on Resource amount needed to level up \nType: .mchart\n```"
-                                               "\n```Info on Dismantle Weapon \nType: .dweapon```"
-                                               "\n```Info on Dismantle Armor \nType: .darmor```"
-                                               "\n```Info on Gauntlet Core Amount \nType: .gca```"
-                                               "\n```Info on Equimpent Rank up Resource Amount \nType: .erura```"
-                                               "\n```Info on Hero Rank up Resource Amount \nType: .hrura```")
+    embed = discord.Embed(colour=discord.Colour(0xffffff), description="\n__**1. Minions Guide**__\n-Where to find minions and which gauntlet to use? Type: .malert\n\n__**2. Gauntlets Guide**__\n-For **Rebel Gauntlet** Type: .grebel\n\n-For **Chaotic Gauntlet** Type: .gchaotic\n\n-For **Maverick Gauntlet** Type: .gmaverick\n\n-For **Holy Gauntlet** Type: .gholy\n\n-For **Lawful Gauntlet** Type: .glawful\n\n-For **Logician Gauntlet** Type: .glogician\n\n-For **Dark Gauntlet** Type: .gdark\n\n-For **Champion Gauntlet** Type: .gchampion\n\n-For **Valiant Gauntlet** Type: .gvaliant\n\n-For **Maniacal Gauntlet** Type: .gmaniacal\n\n__**3. Equipment**__\nInfo on **Resource amount needed to level up** Type: .mchart\n\nInfo on **Dismantle Weapon** Type: .dweapon\n\nInfo on **Dismantle Armor** Type: .darmor\n\nInfo on **Gauntlet Core** Amount Type: .gca\n\nInfo on **Equimpent Rank up Resource Amount** Type: .erura\n\nInfo on **Hero Rank up Resource Amount** Type: .hrura")
+    embed.set_author(name="Chairman´s Bot Guide List")
+    embed.set_footer(text="Chairman´s Bot Version Beta")
+
     await ctx.send(embed=embed)
 
 @client.command(name='8ball',
