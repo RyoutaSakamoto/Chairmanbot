@@ -28,25 +28,25 @@ class lvls(commands.Cog):
 
     @commands.Cog.listener()
     async def on_member_join(self, member):
-        with open(r"C:\Users\Frank\Desktop\BOTZS\test.py", 'r') as f:
+        with open(r"users.json", 'r') as f:
             users = json.load(f)
 
         await update_data(users, member)
 
-        with open('LvlUP.json', 'w') as f:
+        with open('users.json', 'w') as f:
             json.dump(users, f)
 
     @commands.Cog.listener()
     async def on_message(self, message):
         if message.author.bot == False:
-            with open('LvlUP.json', 'r') as f:
+            with open('users.json', 'r') as f:
                 users = json.load(f)
 
             await update_data(users, message.author)
             await add_experience(users, message.author, 5)
             await level_up(users, message.author, message)
 
-            with open('LvlUP.json', 'w') as f:
+            with open('users.json', 'w') as f:
                 json.dump(users, f)
 
     async def update_data(self, users, user):
