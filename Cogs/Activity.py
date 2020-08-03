@@ -44,7 +44,7 @@ class Activity(commands.Cog):
 
         self.users[author_id]['exp'] += 1
 
-        await self.lvl_up(author_id):
+        if await self.lvl_up(author_id):
         await ctx.send(f"{message.author} has leveled up to level {self.users[author_id]['level']}")
 
     @commands.command()
