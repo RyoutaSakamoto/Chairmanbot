@@ -20,7 +20,7 @@ class Activity(commands.Cog):
 
             await asyncio.sleep(5)
 
-    async def lvl_up(self, ctx, author_id):
+    async def lvl_up(self, ctx):
         cur_xp = self.users[author_id]['exp']
         cur_lvl = self.users[author_id]['level']
 
@@ -32,7 +32,7 @@ class Activity(commands.Cog):
 
 
     @commands.Cog.listener()
-    async def on_message(self, message, author_id):
+    async def on_message(self, message):
         if message.author == self.bot.user:
             return
 
