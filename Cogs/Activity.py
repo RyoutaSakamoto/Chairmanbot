@@ -1,6 +1,5 @@
 import discord
 from discord.ext import commands
-
 import json
 import asyncio
 
@@ -20,7 +19,7 @@ class Activity(commands.Cog):
 
             await asyncio.sleep(5)
 
-    async def lvl_up(self, ctx):
+    async def lvl_up(self, ctx, author_id):
         cur_xp = self.users[author_id]['exp']
         cur_lvl = self.users[author_id]['level']
 
@@ -32,7 +31,7 @@ class Activity(commands.Cog):
 
 
     @commands.Cog.listener()
-    async def on_message(self, message):
+    async def on_message(self, ctx, message):
         if message.author == self.bot.user:
             return
 
@@ -45,8 +44,8 @@ class Activity(commands.Cog):
 
         self.users[author_id]['exp'] += 1
 
-        if await self.lvl_up(author_id):
-            print(f"{message.author} has leveled up to level {self.users[author_id]['level']}")
+        await self.lvl_up(author_id):
+        await ctx.send(f"{message.author} has leveled up to level {self.users[author_id]['level']}")
 
     @commands.command()
     async def level(self, ctx, member: discord.Member = None):
