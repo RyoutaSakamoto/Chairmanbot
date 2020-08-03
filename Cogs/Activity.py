@@ -32,7 +32,7 @@ class Activity(commands.Cog):
 
 
     @commands.Cog.listener()
-    async def on_message(self, message):
+    async def on_message(self, message, author_id):
         if message.author == self.bot.user:
             return
 
@@ -45,7 +45,7 @@ class Activity(commands.Cog):
 
         self.users[author_id]['exp'] += 1
 
-        if await self.lvl_up[author_id]:
+        if await self.lvl_up(author_id):
             print(f"{message.author} has leveled up to level {self.users[author_id]['level']}")
 
     @commands.command()
