@@ -31,7 +31,7 @@ class lvls(commands.Cog):
         with open(r"users.json", 'r') as f:
             users = json.load(f)
 
-        await update_data(users, member)
+        await self.update_data(users, member)
 
         with open('users.json', 'w') as f:
             json.dump(users, f)
@@ -42,9 +42,9 @@ class lvls(commands.Cog):
             with open('users.json', 'r') as f:
                 users = json.load(f)
 
-            await update_data(users, message.author)
-            await add_experience(users, message.author, 5)
-            await level_up(users, message.author, message)
+            await self.update_data(users, message.author)
+            await self.add_experience(users, message.author, 5)
+            await self.level_up(users, message.author, message)
 
             with open('users.json', 'w') as f:
                 json.dump(users, f)
