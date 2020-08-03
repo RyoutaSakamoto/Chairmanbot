@@ -44,8 +44,6 @@ class Activity(commands.Cog):
 
         self.users[author_id]['exp'] += 1
 
-        await ctx.send(f"{message.author} has leveled up to level {self.users[author_id]['level']}")
-
     @commands.command()
     async def level(self, ctx, member: discord.Member = None):
         '''Displays informations about user level'''
