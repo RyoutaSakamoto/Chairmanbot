@@ -19,7 +19,7 @@ class Activity(commands.Cog):
 
             await asyncio.sleep(5)
 
-    async def lvl_up(self, ctx, author_id):
+    async def lvl_up(self, author_id):
         cur_xp = self.users[author_id]['exp']
         cur_lvl = self.users[author_id]['level']
 
