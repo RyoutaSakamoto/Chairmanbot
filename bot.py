@@ -65,6 +65,8 @@ class Activity(commands.Cog):
 
         if await self.lvl_up(author_id):
             print(f"{message.author} has leveled up to level {self.users[author_id]['level']}")
+		  
+	return await ctx.send(embed=embed)
 
     @commands.command()
     async def level(self, ctx, member: discord.Member = None):
