@@ -7,7 +7,7 @@ import asyncio
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s %(message)s',
                     datefmt='%a, %d %b %Y %H:%M:%S',
-                    filename='/domain-result.log',
+                    filename='./domain-result.log',
                     filemode='w')
 
 class Activity(commands.Cog):
