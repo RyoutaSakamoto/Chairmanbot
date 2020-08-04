@@ -24,7 +24,7 @@ class misccommands(commands.Cog):
             aliases=['eight_ball', 'eightball', '8-ball'],
             pass_context=True)
 
-    async def eight_ball(context):
+    async def eight_ball(self, ctx, context):
         possible_responses = ['That is a resounding no',
                               'It is not looking likely',
                               'Too hard to tell',
