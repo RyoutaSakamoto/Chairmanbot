@@ -7,12 +7,11 @@ class guide(commands.Cog):
         
     @commands.command()
     async def malert(self, ctx):
-        
         await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/738658744656724018/image0-5.jpg")
 
     @commands.command()
     async def hrankup(self, ctx):
-        await ctx.send(f"https://cdn.discordapp.com/attachments/738064840240791712/739063744801406986/unknown.png")
+        await ctx.send("https://cdn.discordapp.com/attachments/738064840240791712/739063744801406986/unknown.png")
 
     @commands.command()
     async def gcore(self, ctx):
