@@ -1,9 +1,7 @@
 import discord
 from discord.ext import commands
 
-
-class guides(commands.Cog):
-    @client.command()
+@client.command()
 async def malert(ctx):
     await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/738658744656724018/image0-5.jpg")
 
@@ -71,5 +69,3 @@ async def gdark(ctx):
 async def glawful(ctx):
     await ctx.send("https://cdn.discordapp.com/attachments/729672427507941447/729672992636010496/10._BASIC_GUIDE_-_LAWFUL_GAUNTLET.png")p.com/attachments/729672427507941447/729672992636010496/10._BASIC_GUIDE_-_LAWFUL_GAUNTLET.png")
 
-def setup(bot):
-    bot.add_cog(guides(bot))
