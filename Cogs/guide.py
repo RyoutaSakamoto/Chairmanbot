@@ -72,3 +72,6 @@ class guide(commands.Cog):
     @commands.command()
     async def glawful(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/729672427507941447/729672992636010496/10._BASIC_GUIDE_-_LAWFUL_GAUNTLET.png")
+        
+def setup(bot):
+    bot.add_cog(guide(bot))
