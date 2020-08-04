@@ -16,7 +16,7 @@ global mm
 client = commands.Bot(command_prefix = ".")
 client.remove_command('help')
 
-extensions = ['Cogs.administrator', 'Cogs.events','Cogs.misc commands', 'Cogs.Music', 'Cogs.Activity','Cogs.Help','Cogs.random','Cogs.time','Cogs.slots']
+extensions = ['Cogs.administrator', 'Cogs.misc commands', 'Cogs.Music', 'Cogs.Activity','Cogs.Help','Cogs.random','Cogs.time','Cogs.slots']
 
 if __name__ == '__main__':
     for extension in extensions:
@@ -58,34 +58,6 @@ async def roast(ctx, member):
     random.seed(a=None)
     response = random.choice(responses)
     await ctx.send(f'{response} {member}')
-
-@client.command()
-async def say(ctx,*,msg):
-    await ctx.message.delete()
-    await ctx.send("{}" .format(msg))
-
-@client.command(name='8ball',
-            description="Answers a yes/no question.",
-            brief="Answers from the beyond.",
-            aliases=['eight_ball', 'eightball', '8-ball'],
-            pass_context=True)
-
-async def eight_ball(context):
-    possible_responses = [
-
-        'That is a resounding no',
-        'It is not looking likely',
-        'Too hard to tell',
-        'It is quite possible',
-        'Definitely',
-        'Maybe so',
-	'SERIOUSLY....you already know the answer from Google and you still ask me. Why not asking Google,'
-	'Nah, im just a machine. Pip...Pop...Pip...Pi...Di..Pop...',
-	'Wait...Lets me ask my friend Google real quick',
-	'Ah...These questions again...Why did you created me',   
-
-    ]
-    await context.channel.send(random.choice(possible_responses) + ", " + context.message.author.mention)
 
 #Guide Commands
 @client.command()
