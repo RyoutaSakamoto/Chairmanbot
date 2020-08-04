@@ -12,10 +12,6 @@ class misccommands(commands.Cog):
     def __init__(self,bot):
         self.bot = bot
 
-
-
-
-
     @commands.command(aliases=['пинг'])
     async def ping(self,ctx):
         resp = await ctx.send('Pong! Loading...')
@@ -51,15 +47,6 @@ class misccommands(commands.Cog):
     async def say(self,ctx,*,msg):
         await ctx.message.delete()
         await ctx.send("{}" .format(msg))
-
-    @commands.command(aliases=['yt' , 'youtube'])
-    async def YT(self,ctx):
-        await ctx.send(f'https://www.youtube.com/channel/UCbXGt-KFvOw1LvEM-T9KV5A?view_as=subscriber')
-
-    @commands.command(aliases=['vk'])
-    async def VK(self,ctx):
-        await ctx.send(f'https://vk.com/tr_jonas')
-
 
     @commands.command()
     async def user(self, ctx, member: discord.Member = None):
