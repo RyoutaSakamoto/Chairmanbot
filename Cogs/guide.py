@@ -7,6 +7,7 @@ class guide(commands.Cog):
         
     @commands.command()
     async def malert(self, ctx):
+        
         await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/738658744656724018/image0-5.jpg")
 
     @commands.command()
