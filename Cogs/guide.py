@@ -118,11 +118,11 @@ class guide(commands.Cog):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728615548350627880/Screenshot_20200703-012857.png")
         
     @commands.command()
-    async def Doctor Flox(self, ctx):
+    async def Doctorflox(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728640145359765555/Screenshot_20200703-172845_Knighthood.jpg")
         
     @commands.command()
-    async def Don Diego(self, ctx):
+    async def Dondiego(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728625392344236162/Knighthood_2020-07-03-22-40-01.jpg")
         
     @commands.command()
@@ -294,7 +294,7 @@ class guide(commands.Cog):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728615119319466004/Screenshot_20200703-085326.png")
         
     @commands.command()
-    async def Wei Feng(self, ctx):
+    async def Weifeng(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/736172266366173254/Screenshot_20200724-123004_Knighthood.jpg")
                 
     @commands.command()
