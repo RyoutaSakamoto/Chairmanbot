@@ -11,6 +11,7 @@ logging.basicConfig(level=logging.DEBUG,
                     filemode='w')
 
 
+
 class Activity(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -18,14 +19,18 @@ class Activity(commands.Cog):
 
         with open('./users.json', 'r') as f:
             self.users = json.load(f)
+            f.close()
 
     async def save_users(self):
         await self.bot.wait_until_ready()
         while not self.bot.is_closed():
-            with open('./users.json', 'w') as f:
-                json.dump(self.users, f, indent=4)
+            ##with open('./users.json', 'w+') as f:
+                ##json.dump(self.users, f, indent=4)
+            f = open('./users.json', 'w+')
+            f.write(json.dumps(self.users))
+            f.close()
 
-            await asyncio.sleep(5)
+        await asyncio.sleep(5)
 
     async def lvl_up(self, author_id):
         cur_xp = self.users[author_id]['exp']
