@@ -27,16 +27,7 @@ extensions = ['Cogs.Activity']
 if __name__ == '__main__':
     for extension in extensions:
         client.load_extension(extension)
-	
-@client.command
-async def leaderboard(ctx):
-    leaderboard = get_top_experience(data)
-    embed = discord.Embed(title='Top Experience', description='Top experience all time including others not in this server', color=0xff5555)
-    embed.add_field(name='**1st Place**', value=leaderboard[0], inline=False)
-    embed.add_field(name='**2nd Place**', value=leaderboard[1], inline=False)
-    embed.add_field(name='**3rd Place**', value=leaderboard[2], inline=False)
-    await ctx.send(embed=embed)
-	
+
 
 @client.event
 async def on_guild_join(guild, member):
