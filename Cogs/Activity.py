@@ -23,8 +23,8 @@ class Activity(commands.Cog):
     async def save_users(self):
         await self.bot.wait_until_ready()
         while not self.bot.is_closed():
-            ##with open('./users.json', 'w+') as f:
-                ##json.dump(self.users, f, indent=4)
+            with open('./users.json', 'w+') as f:
+                json.dump(self.users, f, indent=4)
             f = open('./users.json', 'w+')
             f.write(json.dumps(self.users))
             f.close()
