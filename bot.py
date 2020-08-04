@@ -16,6 +16,12 @@ global mm
 client = commands.Bot(command_prefix = ".")
 client.remove_command('help')
 
+extensions = ['Cogs.administrator', 'Cogs.events','Cogs.misc commands', 'Cogs.Music', 'Cogs.Activity','Cogs.Help','Cogs.random','Cogs.time','Cogs.slots']
+
+if __name__ == '__main__':
+    for extension in extensions:
+        client.load_extension(extension)
+
 #Help Commands
 @client.command()
 async def help(ctx):
@@ -53,145 +59,10 @@ async def roast(ctx, member):
     response = random.choice(responses)
     await ctx.send(f'{response} {member}')
 
-#Admin Commands
-@client.command()
-@commands.has_permissions(ban_members=True)
-async def softban(ctx, member : discord.Member, *, reason=None):
-    if not member:
-        return await ctx.send("You must specify a user")
-
-    try:
-        await member.ban(reason=None)
-        await member.unban()
-        await ctx.send(f'{member.mention} Has been banned & unbanned')
-    except discord.Forbidden:
-        return await ctx.send("forbidden")
-
-@client.command()
-@commands.has_permissions(manage_messages=True)
-async def clear(ctx, amount : int): #(ctx, amount : int):
-    await ctx.channel.purge(limit=amount)
-
-@client.command()
-@commands.has_permissions(kick_members=True)
-async def kick(ctx, member : discord.Member, *, reason=None):
-    await member.kick(reason=reason)
-    await ctx.send(f'kicked{member.mention}')
-
-
-@client.command()
-@commands.has_permissions(ban_members=True)
-async def ban(ctx, member : discord.Member, *, reason=None):
-    await member.ban(reason=reason)
-    await ctx.send(f'Forbidden {member.mention}')
-
-
-@client.command()
-@commands.has_permissions(ban_members=True)
-async def mute(ctx, member:discord.Member):
-    guild = ctx.guild
-
-    for role in guild.roles:
-        if role.name == "Muted":
-            await member.add_roles(role)
-            await ctx.send("{} User{} Was muted" .format(member.mention,ctx.author.mention))
-            return
-
-            overwrite = discord.PermissionOverwrite(send_messages=False)
-            newRole = await guild.create_role(name="Muted")
-
-            for channel in guild.text_channels:
-                await channel.set_permissions(newRole,overwrite=overwrite)
-
-            await member.add_roles(newRole)
-            await ctx.send("{}  User {} Was muted" .format(member.mention,ctx.author.mention))
-
-@client.command()
-@commands.has_permissions(ban_members=True)
-async def unmute(ctx, member:discord.Member):
-    guild = ctx.guild
-
-    for role in guild.roles:
-        if role.name == "Muted":
-            await member.remove_roles(role)
-            await ctx.send("{} The User Was Unmuted" .format(member.mention))
-        return
-
-@client.command()
-@commands.has_permissions(ban_members=True)
-async def unban(ctx, *, member):
-    banned_users = await ctx.guild.bans()
-    member_name, member_discriminator = member.split('#')
-
-    for ban_entry in banned_users:
-        user = ban_entry.user
-
-        if (user.name, user.discriminator) == (member_name, member_discriminator):
-            await ctx.guild.unban(user)
-            await ctx.send(f'Unbanned {user.mention}')
-            return
-
 @client.command()
 async def say(ctx,*,msg):
     await ctx.message.delete()
     await ctx.send("{}" .format(msg))
-
-#Math Commands
-@client.command()
-async def calculate(ctx, a:int, b:int):
-    await ctx.send(a+b)
-
-@client.command()
-async def subtract(ctx, a:int, b:int):
-    await ctx.send(a-b)
-
-@client.command()
-async def multiply(ctx, a:int, b:int):
-    await ctx.send(a*b)
-
-@client.command()
-async def division(ctx, a:int, b:int):
-    if b==0:
-        ans="0"
-    else:
-        ans=a/b
-    await ctx.send(ans)
-
-#Fun Commands
-@client.command()
-async def slots(ctx):
-    """!slots - Play fruit emojis slot machine."""
-    icon_url = 'https://i.imgur.com/8oGuoyq.png'
-    slots = ['apple', 'watermelon', 'taco', 'cherries', 'doughnut', 'grapes']
-    slot1 = slots[random.randint(0, 5)]
-    slot2 = slots[random.randint(0, 5)]
-    slot3 = slots[random.randint(0, 5)]
-    slot4 = slots[random.randint(0, 5)]
-
-    slot_spin = f'|\t:{slot1}:\t|\t:{slot2}:\t|\t:{slot3}:\t|\t:{slot4}:\t|'
-    jackpot = '$$$ !!! JACKPOT !!! $$$'
-
-    embed = discord.Embed(colour=discord.Colour.gold())
-    embed.set_author(name='Slot Machine', icon_url=icon_url)
-    embed.add_field(
-        name=f'*{ctx.author.name} pulls the slot machine handle...*',
-        value='\u200b',
-        inline=False,
-
-    )
-
-    if (
-            slot1 == slot2 and slot3 == slot4 or
-            slot1 == slot3 and slot2 == slot4 or
-            slot1 == slot4 and slot2 == slot3
-    ):
-        embed.add_field(name=slot_spin, value='\u200b')
-        embed.set_footer(text=jackpot)
-    else:
-        embed.add_field(name=slot_spin, value='\u200b')
-    await ctx.send(embed=embed)
-
-start_time = datetime.datetime.now()
 
 @client.command(name='8ball',
             description="Answers a yes/no question.",
@@ -215,22 +86,6 @@ async def eight_ball(context):
 
     ]
     await context.channel.send(random.choice(possible_responses) + ", " + context.message.author.mention)
-
-
-#Time Commands
-@client.command()
-async def time(ctx):
-	current_time = datetime.datetime.now().strftime('%H:%M:%S')
-	embed = discord.Embed(color=0xB2272D)
-	embed.add_field(name=':alarm_clock: Time:', value=(f'Current time is: {current_time}'), inline=True)
-	await ctx.send(embed=embed)
-
-@client.command()
-async def uptime(ctx):
-	current_time = datetime.datetime.now()
-	difference = current_time - start_time
-	text = difference.total_seconds() / 3600
-	await ctx.send('Current uptime: {:.2f} hours'.format(text))
 
 #Guide Commands
 @client.command()
