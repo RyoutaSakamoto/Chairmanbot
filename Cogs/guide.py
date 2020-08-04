@@ -137,7 +137,7 @@ class guide(commands.Cog):
         
     @commands.command()
     async def Ericson(self, ctx):
-        await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728614613326889010/Screenshot_20200703-182459_Knighthood.jpg")      
+        await ctx.send("https://media.discordapp.net/attachments/728613262488502293/740271557921734717/image0.jpg")      
         
     @commands.command()
     async def Erinn(self, ctx):
