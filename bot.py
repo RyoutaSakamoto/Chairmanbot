@@ -138,7 +138,6 @@ async def unban(ctx, *, member):
             return
 
 @client.command()
-@commands.has_permissions(Administrator=True)
 async def say(ctx,*,msg):
     await ctx.message.delete()
     await ctx.send("{}" .format(msg))
