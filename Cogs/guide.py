@@ -97,7 +97,7 @@ class guide(commands.Cog):
     async def Balberith(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728615826634047558/Screenshot_20200703-012957.png")        
         
-     @commands.command()
+    @commands.command()
     async def Balendu(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728628819367559238/Screenshot_20200703-170812.png")
         
