@@ -15,7 +15,28 @@ class Help(commands.Cog):
 
     @commands.command()
     async def hguides(self, ctx):
-        embed = discord.Embed(colour=discord.Colour(0xffffff), description="\n__**1. Minions Guide**__\n-Where to find minions and which gauntlet to use? Type: .malert or .mchart\n-Every Minion (First Letter big + Second Name for the Minion) Type: .[Minion Name]\n\n__**2. Gauntlets Guide**__\n\n-For **Rebel Gauntlet** Type: .grebel\n\n-For **Chaotic Gauntlet** Type: .gchaotic\n\n-For **Maverick Gauntlet** Type: .gmaverick\n\n-For **Holy Gauntlet** Type: .gholy\n\n-For **Lawful Gauntlet** Type: .glawful\n\n-For **Logician Gauntlet** Type: .glogician\n\n-For **Dark Gauntlet** Type: .gdark\n\n-For **Champion Gauntlet** Type: .gchampion\n\n-For **Valiant Gauntlet** Type: .gvaliant\n\n-For **Maniacal Gauntlet** Type: .gmaniacal\n\n__**3. Equipment**__\nInfo on **Dismantle Weapon** Type: .dweapon\n\nInfo on **Dismantle Armor** Type: .darmor\n\nInfo on **Gauntlet Core** Amount Type: .gcore\n\nInfo on **Equimpent Rank up Resource Amount** Type: .erankup\n\nInfo on **Hero Rank up Resource Amount** Type: .hrankup\n\n__**4. Heroes**__\n-Every Heroe (First Letter big) Type: .[Heores Name]")
+        embed = discord.Embed(colour=discord.Colour(0xffffff), description="\n__**1. Minions Guide**__\n"
+                                                                           "-Where to find minions and which gauntlet to use? Type: .malert or .mchart\n"
+                                                                           "-All **Minions** (First Letter big + Second Name for the Minion) Type: .[Minion Name]\n\n"
+                                                                           "__**2. Gauntlets Guide**__\n\n"
+                                                                           "-For **Rebel Gauntlet** Type: .grebel\n\n"
+                                                                           "-For **Chaotic Gauntlet** Type: .gchaotic\n\n"
+                                                                           "-For **Maverick Gauntlet** Type: .gmaverick\n\n"
+                                                                           "-For **Holy Gauntlet** Type: .gholy\n\n"
+                                                                           "-For **Lawful Gauntlet** Type: .glawful\n\n"
+                                                                           "-For **Logician Gauntlet** Type: .glogician\n\n"
+                                                                           "-For **Dark Gauntlet** Type: .gdark\n\n"
+                                                                           "-For **Champion Gauntlet** Type: .gchampion\n\n"
+                                                                           "-For **Valiant Gauntlet** Type: .gvaliant\n\n"
+                                                                           "-For **Maniacal Gauntlet** Type: .gmaniacal\n\n"
+                                                                           "__**3. Equipment**__\n"
+                                                                           "Info on **Dismantle Weapon** Type: .dweapon\n\n"
+                                                                           "Info on **Dismantle Armor** Type: .darmor\n\n"
+                                                                           "Info on **Gauntlet Core** Amount Type: .gcore\n\n"
+                                                                           "Info on **Equimpent Rank up Resource Amount** Type: .erankup\n\n"
+                                                                           "Info on **Hero Rank up Resource Amount** Type: .hrankup\n\n"
+                                                                           "__**4. Heroes**__\n"
+                                                                           "-All **Heroes** (First Letter big) Type: .[Heores Name]")
         embed.set_author(name="Chairman´s Bot Guide List")
         embed.set_footer(text="Chairman´s Bot Version Beta")
 
