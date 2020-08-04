@@ -333,5 +333,4 @@ async def user(ctx, member: discord.Member = None):
 
     await ctx.send(embed=embed)
 
-
 client.run("NzM3NjU0NjI3OTM1NDUzMTk2.XyAgaA.7RngJ0zuZhnwuAwjmZJNLWQ_yXQ")
