@@ -33,6 +33,7 @@ class guide(commands.Cog):
     async def mchart(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/737654987936497708/738854250712662066/image0.jpg")
 
+    #Gauntlets
     @commands.command()
     async def grebel(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/729672427507941447/729672676947525733/Basic_Guide.png")
@@ -72,7 +73,8 @@ class guide(commands.Cog):
     @commands.command()
     async def glawful(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/729672427507941447/729672992636010496/10._BASIC_GUIDE_-_LAWFUL_GAUNTLET.png")
-        
+    
+    #Heroes
     @commands.command()
     async def Aeron(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728614093795098691/Screenshot_20200703-072019_Knighthood.jpg")
@@ -308,6 +310,104 @@ class guide(commands.Cog):
     @commands.command()
     async def Zoe(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728615723982782464/Screenshot_20200703-012935.png")
-
+    
+    #Minions
+    @commands.command()
+    async def Bear(self, ctx):
+        await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/728869595057881138/Screenshot_20200704-085515_Knighthood.jpg")        
+ 
+     @commands.command()
+    async def Vargr(self, ctx):
+        await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/728869660514320444/Screenshot_20200704-085510_Knighthood.jpg")               
+        
+     @commands.command()
+    async def Commander(self, ctx):
+        await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/728870425794183278/Screenshot_20200704-085347_Knighthood.jpg")        
+        
+     @commands.command()
+    async def Fleshcrusher(self, ctx):
+        await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/728893602385756160/Screenshot_20200704-085422_Knighthood.jpg")        
+        
+    @commands.command()
+    async def Tanker(self, ctx):
+        await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/728893560685854760/Screenshot_20200704-085414_Knighthood.jpg")         
+        
+    @commands.command()
+    async def Longhorn(self, ctx):
+        await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/728868420799430666/Screenshot_20200704-095637.jpg")        
+ 
+     @commands.command()
+    async def Bowmaster(self, ctx):
+        await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/728870316180504636/Screenshot_20200704-085402_Knighthood.jpg")               
+        
+     @commands.command()
+    async def Loremaster(self, ctx):
+        await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/728867301859917824/Screenshot_20200704-095627.jpg")        
+        
+     @commands.command()
+    async def Hog(self, ctx):
+        await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/728869623839064064/Screenshot_20200704-085519_Knighthood.jpg")        
+        
+    @commands.command()
+    async def Parrot(self, ctx):
+        await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/728869561276825640/Screenshot_20200704-085523_Knighthood.jpg")           
+        
+    @commands.command()
+    async def Initiate(self, ctx):
+        await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/728869028059414538/Screenshot_20200704-085528_Knighthood.jpg")        
+ 
+     @commands.command()
+    async def Centurion(self, ctx):
+        await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/728868938925998160/Screenshot_20200704-085534_Knighthood.jpg")               
+        
+     @commands.command()
+    async def Stormbringer(self, ctx):
+        await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/728868546591064124/Screenshot_20200704-095646.jpg")        
+        
+     @commands.command()
+    async def Knifer(self, ctx):
+        await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/728869942090399744/Screenshot_20200704-085431_Knighthood.jpg")        
+        
+    @commands.command()
+    async def Clobberer(self, ctx):
+        await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/728869816118542386/Screenshot_20200704-085427_Knighthood.jpg")           
+        
+    @commands.command()
+    async def Mender(self, ctx):
+        await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/728870216871837736/Screenshot_20200704-085440_Knighthood.jpg")        
+ 
+     @commands.command()
+    async def Matriarch(self, ctx):
+        await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/728870381238353930/Screenshot_20200704-085353_Knighthood.jpg")               
+        
+     @commands.command()
+    async def Fenfolk(self, ctx):
+        await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/728868074345857044/Screenshot_20200704-095652.jpg")        
+        
+     @commands.command()
+    async def Draughtmaster(self, ctx):
+        await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/728870243375513621/Screenshot_20200704-085406_Knighthood.jpg")        
+        
+    @commands.command()
+    async def Deadeye(self, ctx):
+        await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/728868646537003080/Screenshot_20200704-095632.jpg")           
+        
+    @commands.command()
+    async def Drake(self, ctx):
+        await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/728875430597361694/Screenshot_20200704-085418_Knighthood.jpg") 
+        
+    @commands.command()
+    async def Spider(self, ctx):
+        await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/728870349613039636/Screenshot_20200704-085358_Knighthood.jpg")         
+        
+    @commands.command()
+    async def Stonesmasher(self, ctx):
+        await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/728869763421569044/Screenshot_20200704-085448_Knighthood.jpg") 
+        
+    @commands.command()
+    async def Flameslinger(self, ctx):
+        await ctx.send("https://cdn.discordapp.com/attachments/728864840118173746/728866227295879268/Screenshot_20200703-225130_Knighthood.jpg")          
+        
+               
 def setup(bot):
     bot.add_cog(guide(bot))
