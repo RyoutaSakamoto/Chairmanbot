@@ -18,28 +18,25 @@ class misccommands(commands.Cog):
         diff = resp.created_at - ctx.message.created_at
         await resp.edit(content=f'Pong! That took {1000 * diff.total_seconds():.1f}ms.')
 
-    @client.command(name='8ball',
+    @commands.command(name='8ball',
             description="Answers a yes/no question.",
             brief="Answers from the beyond.",
             aliases=['eight_ball', 'eightball', '8-ball'],
             pass_context=True)
 
     async def eight_ball(context):
-    possible_responses = [
-
-        'That is a resounding no',
-        'It is not looking likely',
-        'Too hard to tell',
-        'It is quite possible',
-        'Definitely',
-        'Maybe so',
-	    'SERIOUSLY....you already know the answer from Google and you still ask me. Why not asking Google,'
-	    'Nah, im just a machine. Pip...Pop...Pip...Pi...Di..Pop...',
-	    'Wait...Lets me ask my friend Google real quick',
-	    'Ah...These questions again...Why did you created me',   
-
-    ]
-    await context.channel.send(random.choice(possible_responses) + ", " + context.message.author.mention)
+        possible_responses = ['That is a resounding no',
+                              'It is not looking likely',
+                              'Too hard to tell',
+                              'It is quite possible',
+                              'Definitely',
+                              'Maybe so',
+                              'SERIOUSLY....you already know the answer from Google and you still ask me. Why not asking Google,'
+                              'Nah, im just a machine. Pip...Pop...Pip...Pi...Di..Pop...',
+                              'Wait...Lets me ask my friend Google real quick',
+                              'Ah...These questions again...Why did you created me',]
+	
+        await context.channel.send(random.choice(possible_responses) + ", " + context.message.author.mention)
 
     @commands.command(aliases=['сказать' , 'сказ'])
     async def say(self,ctx,*,msg):
