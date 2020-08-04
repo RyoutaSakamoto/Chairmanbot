@@ -7,7 +7,36 @@ class Help(commands.Cog):
 
     @commands.command()
     async def help(self, ctx):
-        embed = discord.Embed(colour=discord.Colour(0xffffff), description="__**Other**__\n`user`, `division`, `multiply`, `subtract`, `calculate`\n\n__**Guides**__\n`hguides`\n\n__**Fun**__\n`8ball`, `slots`, `roast`\n\n__**Admin**__\n`say`, `clear`, `kick`, `ban`, `unban`, `mute`, `unmute`\n\n__**Utility**__\n`time`, `ping`, `uptime`")
+        embed = discord.Embed(colour=discord.Colour(0xffffff), description="__**Other**__\n"
+                                                                           "`user`,"
+                                                                           "`memo`,"
+                                                                           "`randnumber`,"
+                                                                           "`choice`,"
+                                                                           "`roll`, "
+                                                                           "`division`, "
+                                                                           "`multiply`, "
+                                                                           "`subtract`, "
+                                                                           "`calculate`\n\n"
+                                                                           "__**Guides**__\n"
+                                                                           "`hguides`\n\n"
+                                                                           "__**Fun**__\n"
+                                                                           "`8ball`, "
+                                                                           "`slots`, "
+                                                                           "`roast`\n\n"
+                                                                           "__**Admin**__\n"
+                                                                           "`say`,"
+                                                                           "`softban`, "
+                                                                           "`clear`, "
+                                                                           "`kick`, "
+                                                                           "`ban`, "
+                                                                           "`unban`, "
+                                                                           "`mute`, "
+                                                                           "`unmute`\n\n"
+                                                                           "__**Utility**__\n"
+                                                                           "`time`, "
+                                                                           "`ping`,"
+                                                                           "`remind`, "
+                                                                           "`uptime`")
         embed.set_author(name="Chairman´s Bot Help List")
         embed.set_footer(text="Chairman´s Bot Version Beta")
 
