@@ -16,12 +16,6 @@ global mm
 client = commands.Bot(command_prefix = ".")
 client.remove_command('help')
 
-extensions = ['Cogs.Activity']
-
-if __name__ == '__main__':
-    for extension in extensions:
-        client.load_extension(extension)
-
 #Help Commands
 @client.command()
 async def help(ctx):
