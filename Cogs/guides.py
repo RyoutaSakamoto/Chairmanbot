@@ -3,6 +3,9 @@ from discord.ext import commands
 
 
 class guides(commands.Cog):
+    def __init__(self, bot):
+        self.bot = bot
+        self.bot.loop.create_task(self.save_users()) #background task in cog
     
     @commands.command()
     async def malert(ctx):
