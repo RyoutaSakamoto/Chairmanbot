@@ -48,4 +48,4 @@ async def on_ready():
     await client.change_presence(activity=discord.Game(name="Chairman´s Club"))
     print('Logged in as:\n{0.user.name}\n{0.user.id}'.format(client))
 
-client.run("NzM3NjU0NjI3OTM1NDUzMTk2.XyAgaA.7RngJ0zuZhnwuAwjmZJNLWQ_yXQ")
+client.run("NzM3NjU0NjI3OTM1NDUzMTk2.XyAgaA.y7eUNnudeNTleR5avA0YE05_G08")
