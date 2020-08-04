@@ -1,5 +1,5 @@
 import discord
-import json, random, requests, datetime, time, urllib.request, io, os, aiohttp
+import json, random, datetime, time, urllib.request, io, os, aiohttp
 
 from typing import Union
 from discord.ext import commands
