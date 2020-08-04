@@ -6,36 +6,18 @@ class Help(commands.Cog):
         self.bot = bot
 
     @commands.command()
-    async def help(self,ctx):
-        embed = discord.Embed(title="Discord Bot", description="Commands", color=0xeee657)
-        embed.add_field(name="ping" , value="checks connection to server", )
-        embed.add_field(name="8ball" , value="ask a question", )
-        embed.add_field(name="choice" , value="choose between text", )
-        embed.add_field(name="roll" , value="dices", )
-        embed.add_field(name="randnum" , value="between 1 & 10 default", )
-        embed.add_field(name="bigemoji" , value="large emoji", )
-        embed.add_field(name="say" , value="bot will say it for you", )
-        embed.add_field(name="user" , value="contains profile information", )
-        embed.add_field(name="calculate" , value="+", )
-        embed.add_field(name="subtract" , value="-", )
-        embed.add_field(name="multiply" , value="*", )
-        embed.add_field(name="division" , value="/", )
-        embed.add_field(name="memo" , value="remind me later", )
-        embed.add_field(name="remind" , value="remind me now", )
-        embed.add_field(name="level" , value="tells you level", )
-        embed.add_field(name="clear" , value="clears chat msg", )
-        embed.add_field(name="kick" , value="kicks member", )
-        embed.add_field(name="ban" , value="bans member", )
-        embed.add_field(name="unban" , value="unbans member", )
-        embed.add_field(name="mute" , value="mutes member", )
-        embed.add_field(name="unmute" , value="unmutes member", )
-        embed.add_field(name="join" , value="bot joins to voice", )
-        embed.add_field(name="leave" , value="bot leaves voice", )
-        embed.add_field(name="play" , value="plays a song", )
-        embed.add_field(name="pause" , value="pauses song", )
-        embed.add_field(name="resume" , value="resume song", )
-        embed.add_field(name="skip" , value="skips song", )
-        embed.add_field(name="queue" , value="queues a song", )
+    async def help(ctx):
+        embed = discord.Embed(colour=discord.Colour(0xffffff), description="__**Other**__\n`user`, `division`, `multiply`, `subtract`, `calculate`\n\n__**Guides**__\n`hguides`\n\n__**Fun**__\n`8ball`, `slots`, `roast`\n\n__**Admin**__\n`say`, `clear`, `kick`, `ban`, `unban`, `mute`, `unmute`\n\n__**Utility**__\n`time`, `ping`, `uptime`")
+        embed.set_author(name="Chairman´s Bot Help List")
+        embed.set_footer(text="Chairman´s Bot Version Beta")
+
+        await ctx.send(embed=embed)
+
+    @commands.command()
+    async def hguides(ctx):
+        embed = discord.Embed(colour=discord.Colour(0xffffff), description="\n__**1. Minions Guide**__\n-Where to find minions and which gauntlet to use? Type: .malert or .mchart\n\n__**2. Gauntlets Guide**__\n-For **Rebel Gauntlet** Type: .grebel\n\n-For **Chaotic Gauntlet** Type: .gchaotic\n\n-For **Maverick Gauntlet** Type: .gmaverick\n\n-For **Holy Gauntlet** Type: .gholy\n\n-For **Lawful Gauntlet** Type: .glawful\n\n-For **Logician Gauntlet** Type: .glogician\n\n-For **Dark Gauntlet** Type: .gdark\n\n-For **Champion Gauntlet** Type: .gchampion\n\n-For **Valiant Gauntlet** Type: .gvaliant\n\n-For **Maniacal Gauntlet** Type: .gmaniacal\n\n__**3. Equipment**__\nInfo on **Dismantle Weapon** Type: .dweapon\n\nInfo on **Dismantle Armor** Type: .darmor\n\nInfo on **Gauntlet Core** Amount Type: .gcore\n\nInfo on **Equimpent Rank up Resource Amount** Type: .erankup\n\nInfo on **Hero Rank up Resource Amount** Type: .hrankup")
+        embed.set_author(name="Chairman´s Bot Guide List")
+        embed.set_footer(text="Chairman´s Bot Version Beta")
 
         await ctx.send(embed=embed)
 
