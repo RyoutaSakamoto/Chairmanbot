@@ -81,7 +81,7 @@ class guide(commands.Cog):
     async def Alder(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728613850634649610/Screenshot_2020-07-03-12-31-10-127_com.king.knightsrage.jpg")        
         
-     @commands.command()
+    @commands.command()
     async def Anaara(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728615278723727370/Screenshot_20200703-085857.png")
         
@@ -113,7 +113,7 @@ class guide(commands.Cog):
     async def Cladis(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728615993127206944/Screenshot_20200703-013012.png")        
         
-     @commands.command()
+    @commands.command()
     async def Delphinia(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728615548350627880/Screenshot_20200703-012857.png")
         
@@ -129,7 +129,7 @@ class guide(commands.Cog):
     async def Dvalin(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728615180220497930/Screenshot_20200703-085644.png")        
         
-     @commands.command()
+    @commands.command()
     async def Eileen(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728614434309931078/Screenshot_20200703-182525_Knighthood.jpg")
         
@@ -145,7 +145,7 @@ class guide(commands.Cog):
     async def Fahari(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728623170634121307/Knighthood_2020-07-03-22-40-26.jpg")        
         
-     @commands.command()
+    @commands.command()
     async def Garron(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728615349993472010/Screenshot_20200703-090314.png")
         
@@ -161,7 +161,7 @@ class guide(commands.Cog):
     async def Grimm(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728618872671830036/Screenshot_20200703-173019.jpg")        
         
-     @commands.command()
+    @commands.command()
     async def Griz(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728614523900133416/Screenshot_20200703-182510_Knighthood.jpg")
         
@@ -177,7 +177,7 @@ class guide(commands.Cog):
     async def Helmar(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728614407659061309/Screenshot_20200703-013027.png")        
         
-     @commands.command()
+    @commands.command()
     async def Herne(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728625202795249684/Screenshot_20200703-090405.png")
         
@@ -193,7 +193,7 @@ class guide(commands.Cog):
     async def Keera(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728640089168805929/Screenshot_20200703-172837_Knighthood.jpg")        
         
-     @commands.command()
+    @commands.command()
     async def Krusa(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728623200589709402/Knighthood_2020-07-03-22-40-17.jpg")
         
@@ -201,7 +201,7 @@ class guide(commands.Cog):
     async def Lanasa(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/732942064786079854/Screenshot_20200708-233021_Knighthood.jpg")         
         
-     @commands.command()
+    @commands.command()
     async def Lance(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728613519913648188/Screenshot_2020-07-03-12-31-23-906_com.king.knightsrage.jpg")
         
@@ -209,7 +209,7 @@ class guide(commands.Cog):
     async def Lars(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728614695069679707/Screenshot_20200703-072122_Knighthood.jpg")        
         
-     @commands.command()
+    @commands.command()
     async def Logan(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728614496557334558/Screenshot_20200703-182514_Knighthood.jpg")
         
@@ -225,7 +225,7 @@ class guide(commands.Cog):
     async def Millicent(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728614805874933820/Screenshot_20200703-165839_Knighthood.jpg")        
         
-     @commands.command()
+    @commands.command()
     async def Neko(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728959876973330482/Screenshot_20200704-194406_Knighthood.png")
         
@@ -241,7 +241,7 @@ class guide(commands.Cog):
     async def Outis(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/729054269373677578/Screenshot_20200705-022002_Knighthood.png")        
         
-     @commands.command()
+    @commands.command()
     async def Pentatonix(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728615495149945002/Screenshot_20200703-012834.png")
         
@@ -257,7 +257,7 @@ class guide(commands.Cog):
     async def Rosalin(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728614142910529576/Screenshot_20200703-072005_Knighthood.jpg")        
         
-     @commands.command()
+    @commands.command()
     async def Serra(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728959928458281021/Screenshot_20200704-194302_Knighthood.png")
         
@@ -273,7 +273,7 @@ class guide(commands.Cog):
     async def Titania(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728615319677173800/Screenshot_20200703-085945.png")        
         
-     @commands.command()
+    @commands.command()
     async def Tristan(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728615885237125201/Screenshot_20200703-013005.png")
         
@@ -289,7 +289,7 @@ class guide(commands.Cog):
     async def Viktor(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728615649273839646/Screenshot_20200703-012920.png")        
         
-     @commands.command()
+    @commands.command()
     async def Vordrai(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728615119319466004/Screenshot_20200703-085326.png")
         
@@ -305,7 +305,7 @@ class guide(commands.Cog):
     async def Zalam(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728614729379086397/Screenshot_20200703-072105_Knighthood.jpg")        
         
-     @commands.command()
+    @commands.command()
     async def Zoe(self, ctx):
         await ctx.send("https://cdn.discordapp.com/attachments/728613262488502293/728615723982782464/Screenshot_20200703-012935.png")
 
