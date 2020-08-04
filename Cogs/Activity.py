@@ -10,6 +10,7 @@ logging.basicConfig(level=logging.DEBUG,
                     filename='./domain-result.log',
                     filemode='w')
 
+
 class Activity(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
