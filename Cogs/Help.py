@@ -16,7 +16,7 @@ class Help(commands.Cog):
     @commands.command()
     async def hguides(self, ctx):
         embed = discord.Embed(colour=discord.Colour(0xffffff), description="\n__**1. Minions Guide**__\n"
-                                                                           "-Where to find minions and which gauntlet to use? Type: .malert or .mchart\n"
+                                                                           "-Where to find **Minions** and which gauntlet to use? Type: .malert or .mchart\n\n"
                                                                            "-All **Minions** (First Letter big + Second Name for the Minion) Type: .[Minion Name]\n\n"
                                                                            "__**2. Gauntlets Guide**__\n\n"
                                                                            "-For **Rebel Gauntlet** Type: .grebel\n\n"
