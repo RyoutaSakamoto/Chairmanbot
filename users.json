@@ -76,22 +76,3 @@
         "exp": 2
     }
 }
-
-
-class ExperienceCount:
-
-    def __init__(self, user, experience):
-        self.user = user
-        self.experience = experience
-
-    def __repr__(self):
-        return f'<@{self.user}> has {self.experience} experience'
-
-
-def get_top_experience(data):
-    users = []
-    for k, v in data.items():
-        users.append(ExperienceCount(k, v['experience']))
-    return sorted(users, key=lambda x: x.experience, reverse=True)
-
-a = get_top_experience(data)
