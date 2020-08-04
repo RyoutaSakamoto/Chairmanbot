@@ -16,7 +16,7 @@ global mm
 client = commands.Bot(command_prefix = ".")
 client.remove_command('help')
 
-extensions = ['Cogs.administrator', 'Cogs.misc commands', 'Cogs.Music', 'Cogs.Activity','Cogs.Help','Cogs.random','Cogs.time','Cogs.slots']
+extensions = ['Cogs.administrator', 'Cogs.misc commands', 'Cogs.Help','Cogs.random','Cogs.time','Cogs.slots']
 
 if __name__ == '__main__':
     for extension in extensions:
