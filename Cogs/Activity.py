@@ -11,7 +11,6 @@ logging.basicConfig(level=logging.DEBUG,
                     filemode='w')
 
 
-
 class Activity(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
